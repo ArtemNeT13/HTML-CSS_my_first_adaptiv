@@ -1,0 +1,135 @@
+/*RESET*/
+html{overflow-y: scroll;min-height: 100%;}
+body{height: 100%;margin: 0;}
+a img{border: none;}
+:focus{outline: 0 none;}
+h1,h2,h3,h4,h5,h6{margin: 0;}
+ul{margin: 0;padding: 0;list-style: none;}
+table,th,td{vertical-align: middle;border-collapse: collapse;border-spacing: 0;margin: 0;}
+caption, th{text-align: left;font-weight: normal;}
+section,article,aside,figure,header,nav{display: block;}
+header,
+section,
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "My font";
+    src: url("/fonts/Axiforma-Bold.ttf") format("ttf"),
+         url("/fonts/Axiforma-Bold.woff") format("woff");
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+
+}
+
+
+.gallery {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.gallery .tile {
+    float: left;
+    width: 33.33%;
+    line-height: 0;
+}
+
+.gallery .tile img{
+    width: 100%;
+    
+}
+
+.header{
+    position: relative;
+    background-color: lavender;
+    padding: 15px 5%;
+    min-height: 56px;
+}
+
+.main-menu{
+    text-align: right;
+}
+
+.main-menu li {
+    display: inline;
+    margin-left: 3%;
+}
+
+/* при наведении курсора на список меню, он меняет цвет на розовый */
+.main-menu li a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+.main-menu li a:hover {
+    color: lightpink;
+}
+
+
+.sandwich {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 21px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+     
+
+}
+
+.sandwich div {
+    height: 3px;
+    background-color: cornflowerblue;
+}
+
+.sandwich div:nth-child(2) {
+    margin: 3px 0;
+}
+
+
+@media screen and (max-width: 840px) {
+    .gallery .tile{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .sandwich {
+        display: block;
+    }
+
+    .main-menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 56px;
+        left: 0;
+        background-color: lavender;
+    }
+
+    .main-menu li{
+        display: block;
+        padding: 0 5% 20px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .sandwich:hover + .main-menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery .tile{
+        float: none;
+        width: 100%;
+    }
+}
